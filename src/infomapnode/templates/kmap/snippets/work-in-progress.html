@@ -1,0 +1,21 @@
+{% load i18n %}
+{% load static %}
+<style>
+ .wip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+ }
+ .wip span {
+    font-size: 30px;
+ }
+ .wip img {
+    width: 40px;
+ }
+</style>
+<div class="wip">
+    <img src="{% static 'img/wip.svg' %}"/>
+    <span>Work in progress</span>
+</div>

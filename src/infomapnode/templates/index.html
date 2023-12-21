@@ -1,0 +1,162 @@
+{% extends "index.html" %}
+{% load i18n %}
+{% load static %}
+{% block extra_head %}
+    <meta name="title" property="og:title" content="KMaP - UNP-MAP Knowledge Management Platform">
+    <meta name="description" property="og:description" content="KMAP is conceived as a unique access hub to e UNEP-MAP (Mediterranean Action Plan) knowledge heritage" />
+    <meta name="image" property="og:image:secure_url" content="{{request.scheme}}://{{request.META.HTTP_HOST}}{% static '/img/kmap.info-rac.org.png' %}" />
+    <meta property= "og:image:type" content="image/png" />
+    <meta property="og:type" content="website" />
+    
+    <link href="{% static 'fonts/titilliumweb.css' %}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <style>
+        .gn-content img{
+            width: 100%;
+        }
+        .gn-content .gn-wave-divider.light img{
+            filter: opacity(0.4);
+        }
+        .home-dataset-themes {
+            text-align: center;
+            padding: 16px 0;
+        }
+        .home-dataset-themes h1 {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--gn-title-primary)
+        }
+        .home-dataset-themes ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+            justify-content: center;
+            list-style: none;
+            text-align: center;
+        }
+        .home-dataset-themes li {
+            width: 128px;
+            margin: 16px 8px;
+        }
+        .home-dataset-themes li img {
+            width: 85px;
+            height: auto;
+        }
+        #gn-home-featured-resources-grid, #gn-home-resources-grid, #ms-container {
+            display: none;
+        }
+        .gn-content .section-text {
+            text-align: justify;
+            padding: 10px 4px;
+            color: var(--gn-primary)
+        }
+        .gn-content .section-text h4 {
+            line-height: 1.4rem;
+        }
+        .gn-content .footer .logos {
+            display: flex;
+            padding: 0 50px;
+        }
+        .gn-content .footer {
+            padding: 20px;
+            text-align: justify;
+        }
+        .gn-content .footer .policy {
+            padding: 0;
+        }
+        @media (max-width: 1440px) { 
+            .gn-content .section-text {
+                padding: 40px;
+            }
+        }
+    </style>
+    <div class="gn-container">
+        <div class="gn-content">
+            <div class="section-text">
+                <h4>{% trans 'KMAP is conceived as a unique access hub to e UNEP-MAP (Mediterranean Action Plan) knowledge heritage. It is composed by a Data Hub, accessible through the "Maps" button, collecting geographical data in broader sense. The Knowledge Hub, accessible through "Library" button, collecting all the UNEP-MAP documental heritage, and an Exchange Hub aimed to enforce the cooperation with UNEP-MAP contributors, stakeholders, citizens, and communities of interests. At present, two sections are completed: the Data Hub and the Knowledge Hub, while the Exchange Hub is in preparation. Users with major rights granted can not only view but also create contents and manage rights on their own material, creating a proper "personal use" space inside the platform. Come and discover with us the Knowledge MAP!' %}</h4>
+            </div>
+            <div class="gn-wave-divider light"><img src="{% static 'img/wave.svg' %}"/></div>
+            <div class="home-dataset-themes">
+                <h1>{% trans 'DATASET THEMES' %}</h1>
+                <ul>
+                    <li>
+                        <a href="/resources/#/?filter{tkeywords}=77">
+                            <div>
+                                <img src="{% static 'img/themes/pollution.svg' %}"/>
+                                <div>{% trans 'Pollution' %}</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/resources/#/?filter{tkeywords}=78">
+                            <div>
+                                <img src="{% static 'img/themes/biodiversity.svg' %}"/>
+                                <div>{% trans 'Marine Biodiversity' %}</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/resources/#/?filter{tkeywords}=79">
+                            <div>
+                                <img src="{% static 'img/themes/sustainability.svg' %}"/>
+                                <div>{% trans 'Sustainability and Blue Economy' %}</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/resources/#/?filter{tkeywords}=80">
+                            <div>
+                                <img src="{% static 'img/themes/climate_change.svg' %}"/>
+                                <div>{% trans 'Climate Change' %}</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/resources/#/?filter{tkeywords}=81">
+                            <div>
+                                <img src="{% static 'img/themes/MSP.svg' %}"/>
+                                <div>{% trans 'Marine Spatial Planning' %}</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/resources/#/?filter{tkeywords}=76">
+                            <div>
+                                <img src="{% static 'img/themes/fishery.svg' %}"/>
+                                <div>{% trans 'Fishery and Aquaculture' %}</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/resources/#/?filter{tkeywords}=82">
+                            <div>
+                                <img src="{% static 'img/themes/governance.svg' %}"/>
+                                <div>{% trans 'Governance' %}</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="gn-wave-divider"><img src="{% static 'img/wave.svg' %}"/></div>
+            <div class="footer">
+                <div class="logos">
+                    <a href="https://www.unep.org/unepmap/" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/footer/unep.png' %}"/></a>
+                    <a href="http://www.info-rac.org/en" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/footer/info-rac.png' %}"/></a>
+                    <a href="https://www.paprac.org/" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/footer/paprac.png' %}"/></a>
+                    <a href="https://planbleu.org/" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/footer/planbleu.png' %}"/></a>
+                    <a href="https://www.medwaves-centre.org/" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/footer/medwaves-center.png' %}"/></a>
+                    <a href="https://www.rac-spa.org/" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/footer/rac-spa.png' %}"/></a>
+                    <a href="https://www.rempec.org/en" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/footer/rempec.png' %}"/></a>
+                    <a href="https://www.unep.org/unepmap/who-we-are/institutional-set/med-pol" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/footer/medpol.png' %}"/></a>
+                </div>
+                <div class="sub-text">
+                    {% trans 'The platform has been developed within the INFO/RAC Program of Work 2022-2023 and the results you can appreciate on this site is the fruit of a cooperation work, led by INFO/RAC, of data review and harmonization among data providers and the RACs. Without this joint effort nothing of what you see could have been available. The platform in its stable version will also be connected to the World Environment Situation Room <a href="https://wesr.unep.org/" target="_blank" rel="noopener noreferrer">(https://wesr.unep.org/)</a> as our Regional Sea branch of the platform itself.' %}
+                    {% include "./kmap/snippets/footer-policy.html" %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ block.super }}
+{% endblock %}

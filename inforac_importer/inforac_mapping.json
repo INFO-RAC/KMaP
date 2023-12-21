@@ -1,0 +1,282 @@
+{
+    "B1": {
+        "sheet": [
+            "Site"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "B2": {
+        "sheet": [
+            "Site"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "B3": {
+        "sheet": [
+            "Site"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "BA1": {
+        "sheet": [
+            "Effort_Aerial",
+            "Effort_Boat"
+        ],
+        "geom": [
+            "LatitudeEffort",
+            "LongitudeEffort"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "BB1": {
+        "sheet": [
+            "Site"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "BB2": {
+        "sheet": [
+            "Site"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "BB3": {
+        "sheet": [
+            "Site"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "BB4": {
+        "sheet": [
+            "Site"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "BC1": {
+        "sheet": [
+            "Area"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "BC2": {
+        "sheet": [
+            "Recording"
+        ],
+        "geom": [
+            "LatitudeEffort",
+            "LongitudeEffort"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "BC3": {
+        "sheet": [
+            "Area"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "BM1": {
+        "sheet": [
+            "Area"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "BT1": {
+        "sheet": [
+            "NestBeach"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "BT2": {
+        "sheet": [
+            "Area"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "BT3": {
+        "sheet": [
+            "Area"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "BT4": {
+        "sheet": [
+            "Area"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "BT5": {
+        "sheet": [
+            "Area"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "I1": {
+        "sheet": [
+            "Stations"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "E1": {
+        "sheet": [
+            "Stations"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "P1": {
+        "sheet": [
+            "Stations"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "PAE1": {
+        "sheet": [
+            "Stations"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "PMO1": {
+        "sheet": [
+            "Stations"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "PSF1": {
+        "sheet": [
+            "Stations"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "Q1": {
+        "sheet": [
+            "Stations"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "M1": {
+        "sheet": [
+            "Stations"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "M2": {
+        "sheet": [
+            "Stations"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "M3": {
+        "sheet": [
+            "Stations"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ],
+        "columns": ["CountryCode"]
+    },
+    "MLT1": {
+        "sheet": [
+            "Specimen"
+        ],
+        "geom": [
+            "Latitude",
+            "Longitude"
+        ]
+    }
+}

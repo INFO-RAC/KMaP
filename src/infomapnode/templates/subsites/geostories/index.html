@@ -1,0 +1,279 @@
+{% extends "kmap/resources-page.html" %}
+{% load static %}
+
+{% block resource_script %}
+<link rel="stylesheet" href="https://openlayers.org/en/v5.3.0/css/ol.css" type="text/css"/>
+<style>
+  #ms-container {
+    display: none;
+  }
+  #geo-container {
+    border: 1px solid #ddd;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+  #geo-container #map {
+    cursor: pointer;
+  }
+  #geo-container #popup-closer {
+    z-index: 1;
+  }
+  #geo-container .ol-popup-closer:hover {
+    opacity: 0.8;
+    color: inherit;
+  }
+  #geo-container #popup-content {
+    display: flex;
+    flex-direction: column;
+  }
+  #geo-container #popup-content .panel {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 auto;
+    max-height: 300px;
+    max-width: 300px;
+    min-height: 100px;
+    min-width: 200px;
+    overflow: hidden;
+    width: 100%;
+    position: relative; 
+    margin-bottom: 0px;
+  }
+  #geo-container #popup-content .panel .panel-heading {
+    text-align: center;
+  }
+  #geo-container .ol-viewport .ol-overlay-container.ol-selectable {
+    pointer-events: unset;
+  }
+  @keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+  }
+  .spinner:after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-radius: 50%;
+    border: 5px solid rgba(180, 180, 180, 0.6);
+    border-top-color: rgba(0, 0, 0, 0.4);
+    animation: spinner 0.6s linear infinite;
+  }
+</style>
+<div class="row">
+  <div class="col-xs-12">
+    <div id="geo-container">
+      <div id="map"></div>
+      <div id="spinner"></div>
+      <div id="popup" class="ol-popup">
+        <div id="popup-content"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v5.3.0/build/ol.js"></script>
+<script>
+  const popupClose = "<a href='#' id='popup-closer' class='ol-popup-closer'></a>"
+  map = new ol.Map({
+      layers: [
+        new ol.layer.Tile({
+          source: new ol.source.OSM(),
+          opacity: 0.4,
+        })
+      ],
+    target: "map",
+    view: new ol.View({
+      center: [0, 0],
+      maxZoom: 18,
+      minZoom: 2,
+      zoom: 2,
+    }),
+  });
+  map.getTargetElement().classList.add('spinner');
+  fetch(
+  'https://maps.info-rac.org/arcgis/rest/services/Hosted/basemap_inforac_3857/MapServer/WMTS?request=GetCapabilities'
+)
+  .then(function (response) {
+    return response.text();
+  })
+  .then(function (text) {
+    const result = new ol.format.WMTSCapabilities().read(text);
+    const options = new ol.source.WMTS.optionsFromCapabilities(result, {
+      layer: 'Hosted_basemap_inforac_3857',
+      matrixSet: 'default028mm',
+    });
+    map.addLayer(new ol.layer.Tile({
+      opacity: 1,
+      source: new ol.source.WMTS({...options, wrapX: true}),
+    }));
+  document.getElementById('popup').insertAdjacentHTML('afterbegin', popupClose);
+  const popup = document.getElementById("popup");
+  let content = document.getElementById("popup-content");
+  let closer = document.getElementById("popup-closer");
+
+  let overlay = new ol.Overlay({
+    element: popup,
+    autoPan: true,
+    autoPanAnimation: {
+      duration: 250,
+    },
+  });
+  map.addOverlay(overlay);
+
+  closer.onclick = function () {
+    overlay.setPosition(undefined);
+    closer.blur();
+    return false;
+  };
+  map.on("singleclick", function (event) {
+    if (map.hasFeatureAtPixel(event.pixel) === true) {
+      const innerContent = map
+        .forEachFeatureAtPixel(event.pixel, (ft) => ft)
+        ?.get("content");
+      content.innerHTML = innerContent;
+      overlay.setPosition(event.coordinate);
+    } else {
+      overlay.setPosition(undefined);
+      closer.blur();
+    }
+  });
+
+  const search = window.location.hash.split("?")[1];
+  fetch(`/geostories/api/v2/geoapps?filter{resource_type}=geostory${search ? `&${search}` : ""}&page_size=999999`)
+    .then((res) => res.json())
+    .then((response) => {
+      const features = response.geoapps.map((resource) => {
+        const [minx, miny, maxx, maxy] = resource.extent.coords;
+
+        const coordinates = [
+          minx + (maxx - minx) / 2,
+          miny + (maxy - miny) / 2,
+        ];
+
+        return {
+          geometry: {
+            type: "Point",
+            coordinates: coordinates,
+          },
+          properties: {
+            content: resource.detail_url
+              ? `
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <span class="panel-title">
+                        GeoStories
+                      </span>
+                    </div>
+                    <div class="panel-body">
+                      <div style="width: 100%; height: 100%; overflow-x: auto;">
+                          <div class="ms-properties-viewer">
+                            <ul class="ms-properties-viewer-body">
+                              <li>
+                                <div class="ms-properties-viewer-key">Title</div>
+                                <div class="ms-properties-viewer-value">${
+                                  resource.title
+                                }</div>
+                              </li>
+                              <li>
+                                <div class="ms-properties-viewer-key">Description</div>
+                                <div class="ms-properties-viewer-value" style="max-height: 130px; overflow-y: auto">
+                                  <div style="white-space: initial;">
+                                    <style>
+                                        .ms-properties-viewer-value {
+                                            white-space: initial;
+                                        }
+                                    </style>
+                                    <p>${resource.abstract ? resource.abstract : 'No abstract provided'}</p>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                          <div style="display:flex;flex-direction:row-reverse;">
+                              <a href="${resource.detail_url.replace(
+                                "https://infomapnode.info-rac.org",
+                                ""
+                              )}" rel="noopener noreferrer" class="btn btn-primary">View</a>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                `
+              : "",
+          },
+          type: "Feature"
+        };
+      });
+      if (features.length) {
+        const vectorSource = new ol.source.Vector({
+          features: new ol.format.GeoJSON().readFeatures(
+            { type: "FeatureCollection", features },
+            {
+              dataProjection: "EPSG:4326",
+              featureProjection: map.getView().getProjection(),
+            }
+          ),
+        });
+
+        const layer = new ol.layer.Vector({
+          source: vectorSource,
+          style: new ol.style.Style({
+            image: new ol.style.Circle({
+              radius: 8,
+              fill: new ol.style.Fill({
+                color: "#b0f40b",
+              }),
+              stroke: new ol.style.Stroke({
+                color: "#333333",
+                opacity: 1,
+                width: 2,
+              }),
+            }),
+          }),
+        });
+        map.addLayer(layer);
+        let extent = [Infinity, Infinity, -Infinity, -Infinity];
+        (response.geoapps || []).forEach(function(res) {
+            const [minx, miny, maxx, maxy] = res.extent && res.extent.coords || [];
+            if (extent[0] > minx) extent[0] = minx;
+            if (extent[1] > miny) extent[1] = miny;
+            if (extent[2] < maxx) extent[2] = maxx;
+            if (extent[3] < maxy) extent[3] = maxy;
+        });
+        extent = new ol.proj.transformExtent(extent, 'EPSG:4326', 'EPSG:3857');
+        map
+          .getView()
+          .fit(extent, { size: map.getSize(), duration: 400 });
+        layer.on('render', () =>{
+          map.getTargetElement().classList.remove('spinner');
+        });
+      } else {
+        map.getTargetElement().classList.remove('spinner');
+      }
+    });
+  }).catch(function (){
+    map.getTargetElement().classList.remove('spinner');
+  });
+  (function () {
+    window.addEventListener("hashchange", () => {
+      const prevHash = window.sessionStorage.getItem('hash');
+      const currentHash = decodeURIComponent(window.location.hash);
+      if (prevHash !== currentHash && currentHash.includes('filter')) {
+        window.sessionStorage.setItem('hash', currentHash);
+        window.location.reload(); // Allow re-fetching of geostory with new filter
+      }
+    });
+  })();
+</script>
+{% endblock %}

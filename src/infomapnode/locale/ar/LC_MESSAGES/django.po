@@ -1,0 +1,910 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-17 12:07+0000\n"
+"PO-Revision-Date: 2023-02-17 13:33+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: infomapnode/templates/about.html:4 infomapnode/templates/about.html:8
+#: infomapnode/templates/geonode-mapstore-client/snippets/footer.html:11
+msgid "About InfoMapNode"
+msgstr "حول InfoMapNode"
+
+#: infomapnode/templates/about.html:10
+msgid "InfoMAPNode introduction"
+msgstr "InfoMAPمقدمة"
+
+#: infomapnode/templates/about.html:12
+msgid ""
+"\n"
+"        InfoMAPNode is the geoportal for viewing and consulting metadata and "
+"geospatial data collected under the Barcelona\n"
+"        Convention. The platform allows you to consult data directly "
+"collected by UNEP/MAP and theis MAP components or data\n"
+"        collections that are produced by international bodies and/or "
+"projects, operating in the context of the Mediterranean\n"
+"        Sea.\n"
+"    "
+msgstr ""
+"\n"
+"InfoMAPNode هي البوابة الجغرافية لعرض واستشارة البيانات الوصفية والبيانات "
+"الجغرافية المكانية التي تم جمعها في إطار برشلونة\n"
+"        اصطلاح. تتيح لك المنصة الرجوع إلى البيانات التي تم جمعها مباشرة "
+"بواسطة برنامج الأمم المتحدة للبيئة / خطة عمل البحر الأبيض المتوسط ومكونات أو "
+"بيانات خطة عمل البحر الأبيض المتوسط\n"
+"        المجموعات التي تنتجها الهيئات و / أو المشاريع الدولية العاملة في "
+"سياق البحر الأبيض المتوسط\n"
+"        بحر.\n"
+"    "
+
+#: infomapnode/templates/about.html:20
+msgid ""
+"\n"
+"        InfoMAPNode is based on the open software package of GeoNode that is "
+"a geospatial content management system, using\n"
+"        as platform for the management and publication of geospatial data. "
+"It brings together mature and stable open-source\n"
+"        software projects under a consistent and easy-to-use interface "
+"allowing non-specialized users to share data and\n"
+"        create interactive maps.\n"
+"    "
+msgstr ""
+"\n"
+"يعتمد InfoMAPNode على حزمة البرامج المفتوحة ل GeoNode وهو نظام لإدارة "
+"المحتوى الجغرافي المكاني ، باستخدام\n"
+"        كمنصة لإدارة ونشر البيانات الجغرافية المكانية. فهو يجمع بين المصدر "
+"المفتوح الناضج والمستقر\n"
+"        مشاريع برمجية تحت واجهة متسقة وسهلة الاستخدام تسمح للمستخدمين غير "
+"المتخصصين بمشاركة البيانات و\n"
+"        إنشاء خرائط تفاعلية.\n"
+"    "
+
+#: infomapnode/templates/about.html:28
+msgid ""
+"\n"
+"        Data management tools built into InfoMAPNode allow for integrated "
+"creation of data, metadata, and map\n"
+"        visualizations. Each dataset in the system can be shared publicly or "
+"restricted to allow access to only specific\n"
+"        users, following INFO/RAC Data Management policy (please visit INFO/"
+"RAC website for more information). Social\n"
+"        features like user profiles and commenting and rating systems allow "
+"for the development of communities around each\n"
+"        platform to facilitate the use, management, and quality control of "
+"the data the geoportal instance contains.\n"
+"    "
+msgstr ""
+"\n"
+"تسمح أدوات إدارة البيانات المضمنة في InfoMAPNode بالإنشاء المتكامل للبيانات "
+"والبيانات الوصفية والخريطة\n"
+"        تصورات. يمكن مشاركة كل مجموعة بيانات في النظام بشكل عام أو تقييدها "
+"للسماح بالوصول إلى مجموعة محددة فقط\n"
+"        المستخدمين ، باتباع سياسة إدارة بيانات INFO / RAC (يرجى زيارة موقع "
+"INFO / RAC لمزيد من المعلومات). اجتماعي\n"
+"        تسمح ميزات مثل ملفات تعريف المستخدمين وأنظمة التعليق والتصنيف بتطوير "
+"المجتمعات حول كل منها\n"
+"        منصة لتسهيل استخدام البيانات التي يحتوي عليها مثيل Geoportal "
+"وإدارتها ومراقبة جودتها.\n"
+"    "
+
+#: infomapnode/templates/about.html:37
+msgid ""
+"\n"
+"        It is also designed to be a flexible platform that software "
+"developers can extend, modify or integrate against to\n"
+"        meet requirements in their own applications.\n"
+"    "
+msgstr ""
+"\n"
+"كما أنه مصمم ليكون نظاما أساسيا مرنا يمكن لمطوري البرامج توسيعه أو تعديله أو "
+"دمجه مقابل\n"
+"        تلبية المتطلبات في تطبيقاتهم الخاصة.\n"
+"    "
+
+#: infomapnode/templates/geonode-mapstore-client/snippets/footer.html:6
+#: infomapnode/templates/guideline.html:4
+msgid "Guideline"
+msgstr "إرشادات"
+
+#: infomapnode/templates/geonode-mapstore-client/snippets/footer.html:16
+#: infomapnode/templates/policy.html:4
+msgid "InfoMapNode policy"
+msgstr "سياسة InfoMapNode"
+
+#: infomapnode/templates/geonode-mapstore-client/snippets/footer.html:21
+msgid "Explore Maps"
+msgstr "استكشاف الخرائط"
+
+#: infomapnode/templates/geonode-mapstore-client/snippets/hero.html:51
+msgid "Welcome"
+msgstr "مرحبا"
+
+#: infomapnode/templates/geonode-mapstore-client/snippets/hero.html:58
+msgid ""
+"This is InfoMapNode the geoportal for sharing geospatial data and maps "
+"within the MAP Barcelona Convention among the Mediterranean area.<br/>If you "
+"are a user can navigate and view metadata, data and maps available in the "
+"system, if you are a data provider in order to have the right credential and "
+"account writing to <a href=\"mailto:info@info-rac.org\">System manager</a>."
+msgstr ""
+"هذه هي InfoMapNode البوابة الجغرافية لتبادل البيانات الجغرافية المكانية "
+"والخرائط ضمن اتفاقية برشلونة MAP بين منطقة البحر الأبيض المتوسط.<br/>إذا كنت "
+"مستخدما ، فيمكنك التنقل وعرض البيانات الوصفية والبيانات والخرائط المتوفرة في "
+"النظام ، إذا كنت موفر بيانات من أجل الحصول على بيانات الاعتماد الصحيحة "
+"وكتابة الحساب إلى <a href=\"mailto:info@info-rac.org\">مدير النظام</a>."
+
+#: infomapnode/templates/guideline.html:8
+msgid "InfoMapNode guideline"
+msgstr "دليل InfoMapNode"
+
+#: infomapnode/templates/guideline.html:11
+msgid ""
+"\n"
+"        This section is dedicated to provide the user with a navigation "
+"guide using the InfoMAPNode.\n"
+"    "
+msgstr ""
+"\n"
+"هذا القسم مخصص لتزويد المستخدم بدليل التنقل باستخدام InfoMAPNode.\n"
+"    "
+
+#: infomapnode/templates/guideline.html:16
+msgid ""
+"\n"
+"        The guide consists of a section dedicated to describing how to "
+"perform data and metadata searches within the\n"
+"        geoportal and how to view them in the integrated visualization "
+"client. As regards the user manual for accredited\n"
+"        users, please refer to the InfoMAPNode section of INFO/RAC.\n"
+"    "
+msgstr ""
+"\n"
+"يتكون الدليل من قسم مخصص لوصف كيفية إجراء عمليات البحث عن البيانات والبيانات "
+"الوصفية داخل\n"
+"        Geoportal وكيفية عرضها في عميل التصور المتكامل. فيما يتعلق بدليل "
+"المستخدم للمعتمدين\n"
+"        المستخدمين ، يرجى الرجوع إلى قسم InfoMAPNode في INFO / RAC.\n"
+"    "
+
+#: infomapnode/templates/guideline.html:23
+msgid "INFO/RAC Website - InfoMAPNode section"
+msgstr "موقع INFO/RAC - InfoMAPقسم التشغيل"
+
+#: infomapnode/templates/guideline.html:26
+msgid "InfoMAPNode user guide"
+msgstr "InfoMAPدليل المستخدم"
+
+#: infomapnode/templates/index.html:34
+msgid "Dataset Themes"
+msgstr "سمات مجموعة البيانات"
+
+#: infomapnode/templates/index.html:40
+msgid "Biodiversity"
+msgstr "التنوع البيولوجي"
+
+#: infomapnode/templates/index.html:48
+msgid "Boundaries"
+msgstr "الحدود"
+
+#: infomapnode/templates/index.html:56
+msgid "Oceans"
+msgstr "المحيطات"
+
+#: infomapnode/templates/index.html:64
+msgid "Pollution"
+msgstr " 3 نجوم "
+
+#: infomapnode/templates/index.html:72
+msgid "Waters management"
+msgstr "إدارة المياه"
+
+#: infomapnode/templates/policy.html:8
+msgid "Policy applied to InfoMapNode"
+msgstr "السياسة المطبقة على InfoMapNode"
+
+#: infomapnode/templates/policy.html:11
+msgid ""
+"\n"
+"        The InfoMapNode geoportal is managed by Regional Activities Centre "
+"for Information and Communication (INFO/RAC) that\n"
+"        is hosted by the Italian National Institute for Environmental "
+"Protection and Research (ISPRA), whose office is at\n"
+"        Via Vitaliano Brancati 48 Roma. INFO/RAC is in charge of the "
+"communication and dissemination activities within the\n"
+"        UN Environment Programme /Mediterranean Action Plan and related "
+"projects and it will be the controller of any\n"
+"        personal data processed as described in this Policy.\n"
+"    "
+msgstr ""
+"\n"
+"تتم إدارة البوابة الجغرافية InfoMapNode من قبل مركز الأنشطة الإقليمية "
+"للمعلومات والاتصالات (INFO/RAC) الذي\n"
+"        يستضيفه المعهد الوطني الإيطالي لحماية البيئة والبحوث (ISPRA) ، الذي "
+"يقع مكتبه في\n"
+"        فيا فيتاليانو برانكاتي 48 روما. INFO/RAC هو المسؤول عن أنشطة الاتصال "
+"والنشر داخل\n"
+"        برنامج الأمم المتحدة للبيئة / خطة عمل البحر الأبيض المتوسط والمشاريع "
+"ذات الصلة وسيكون المتحكم في أي\n"
+"        البيانات الشخصية التي تتم معالجتها كما هو موضح في هذه السياسة.\n"
+"    "
+
+#: infomapnode/templates/policy.html:20
+msgid ""
+"\n"
+"        The INFO/RAC data privacy policy complies with the General Data "
+"Protection Regulation (GDPR) that will take effect\n"
+"        on May 25, 2018. Below you will find information on how the INFO/RAC "
+"uses information. Privacy policy and use of\n"
+"        personal data pursuant to the italian legislative decree n.196/2003 "
+"(privacy code) and regulation (EU) 2016/679 of\n"
+"        the european parliament and of the council of 27 april 2016 on the "
+"protection of natural persons with regard to the\n"
+"        processing of personal data and on the free movement of such data, "
+"and repealing directive 95/46/EC (General Data\n"
+"        Protection Regulation-GDPR). More information is available in the "
+"Official Journal of the European Union.\n"
+"    "
+msgstr ""
+"\n"
+"تتوافق سياسة خصوصية بيانات INFO / RAC مع اللائحة العامة لحماية البيانات "
+"(GDPR) التي ستدخل حيز التنفيذ\n"
+"        في 25 مايو 2018. ستجد أدناه معلومات حول كيفية استخدام المعلومات / "
+"RAC للمعلومات. سياسة الخصوصية واستخدام\n"
+"        البيانات الشخصية وفقا للمرسوم التشريعي الإيطالي رقم 196/2003 (قانون "
+"الخصوصية) واللائحة (الاتحاد الأوروبي) 2016/679 من\n"
+"        إن البرلمان الأوروبي والمجلس المؤرخ 27 أبريل 2016 بشأن حماية الأشخاص "
+"الطبيعيين فيما يتعلق ب\n"
+"        معالجة البيانات الشخصية وحرية حركة هذه البيانات ، وإلغاء التوجيه "
+"95/46 / EC (البيانات العامة\n"
+"        لائحة الحماية - GDPR). يتوفر المزيد من المعلومات في الجريدة الرسمية "
+"للاتحاد الأوروبي.\n"
+"    "
+
+#: infomapnode/templates/policy.html:30
+msgid ""
+"\n"
+"        The protection of your personal data is an important matter for the "
+"INFO/RAC. Therefore, we have taken technical and\n"
+"        organizational measures to ensure that data protection regulations "
+"are observed both by us and by external service\n"
+"        providers.\n"
+"    "
+msgstr ""
+"\n"
+"تعد حماية بياناتك الشخصية مسألة مهمة بالنسبة ل INFO/RAC. لذلك ، اتخذنا "
+"التقنية و\n"
+"        التدابير التنظيمية لضمان مراعاة لوائح حماية البيانات من قبلنا ومن "
+"قبل الخدمة الخارجية\n"
+"        مقدمي.\n"
+"    "
+
+#: infomapnode/templates/policy.html:37
+msgid ""
+"\n"
+"        In the InfoMapNode, personal data is collected and stored only to "
+"the extent that it is technically necessary in\n"
+"        order to regulate access and right to view, upload or edit spatial "
+"data and metadata. Your personal data will only\n"
+"        be publicly available/visible if you have previously agreed to "
+"this.\n"
+"    "
+msgstr ""
+"\n"
+"في InfoMapNode ، يتم جمع البيانات الشخصية وتخزينها فقط إلى الحد الذي يكون "
+"فيه ضروريا تقنيا في\n"
+"        من أجل تنظيم الوصول والحق في عرض أو تحميل أو تحرير البيانات المكانية "
+"والبيانات الوصفية. بياناتك الشخصية سوف فقط\n"
+"        كن متاحا / مرئيا للجمهور إذا كنت قد وافقت مسبقا على ذلك.\n"
+"    "
+
+#: infomapnode/templates/policy.html:44
+msgid ""
+"\n"
+"        Please note: at any time, you may revoke your consent to the use of "
+"your personal data. To this end, please send an\n"
+"        e-mail to <a href=\"mailto:info@info-rac.org\">info@info-rac.org</"
+"a>, with the title: \"<i>Unsubscribe to\n"
+"            InfoMapNode</i>\".\n"
+"    "
+msgstr ""
+"يرجى ملاحظة: في أي وقت ، يمكنك إلغاء موافقتك على استخدام بياناتك الشخصية. "
+"تحقيقا لهذه الغاية ، يرجى إرسال ملف\n"
+"        أرسل بريدا إلكترونيا إلى <a href=\"mailto:info@info-rac."
+"org\">info@info-rac.org</a> ، بعنوان: \"<i>إلغاء الاشتراك في\n"
+"          \n"
+"  إنفومابنود</i>\".\n"
+"    "
+
+#: infomapnode/templates/policy.html:51
+msgid ""
+"\n"
+"        The following privacy policy provides you with a complete overview "
+"of how the INFO/RAC guarantees the protection of\n"
+"        your data, what kind of data are collected and how it will be used.\n"
+"    "
+msgstr ""
+"\n"
+"توفر لك سياسة الخصوصية التالية نظرة عامة كاملة على كيفية ضمان INFO / RAC "
+"لحماية\n"
+"        بياناتك ونوع البيانات التي يتم جمعها وكيف سيتم استخدامها.\n"
+"    "
+
+#: infomapnode/templates/policy.html:56
+msgid "What Information do we gather from you?"
+msgstr "ما هي المعلومات التي نجمعها منك؟"
+
+#: infomapnode/templates/policy.html:58
+msgid ""
+"\n"
+"        We fully respect your right to privacy in relation to your "
+"interactions with the INFO/RAC platforms and endeavor to\n"
+"        guarantee to be transparent in our dealings with you as to what "
+"information we will collect and how we will use your\n"
+"        information. Also, we only collect and use personal information "
+"where we are legally entitled to do so.\n"
+"    "
+msgstr ""
+"\n"
+"نحن نحترم تماما حقك في الخصوصية فيما يتعلق بتفاعلاتك مع منصات INFO / RAC "
+"ونسعى إلى\n"
+"        ضمان الشفافية في تعاملاتنا معك فيما يتعلق بالمعلومات التي سنجمعها "
+"وكيف سنستخدم\n"
+"        معلومات. أيضا ، نحن نجمع المعلومات الشخصية ونستخدمها فقط حيث يحق لنا "
+"قانونا القيام بذلك.\n"
+"    "
+
+#: infomapnode/templates/policy.html:65
+msgid ""
+"\n"
+"        You may be asked to provide the following categories of data when "
+"you ask to registered in the single-sing-on\n"
+"        authentication system, to manage access and right in the different "
+"data collection and visualization platforms:\n"
+"    "
+msgstr ""
+"\n"
+"قد يطلب منك تقديم الفئات التالية من البيانات عندما تطلب التسجيل في الأغنية "
+"الفردية\n"
+"        نظام المصادقة ، لإدارة الوصول والحق في منصات جمع البيانات والتصور "
+"المختلفة:\n"
+"    "
+
+#: infomapnode/templates/policy.html:71
+msgid "Names"
+msgstr "أسماء"
+
+#: infomapnode/templates/policy.html:72
+msgid "Gender"
+msgstr "الجنس"
+
+#: infomapnode/templates/policy.html:73
+msgid "Role"
+msgstr "دور"
+
+#: infomapnode/templates/policy.html:74
+msgid "Qualifications"
+msgstr "المؤهلات"
+
+#: infomapnode/templates/policy.html:75
+msgid "Organization"
+msgstr "المنظمة"
+
+#: infomapnode/templates/policy.html:76
+msgid "Department"
+msgstr "القسم"
+
+#: infomapnode/templates/policy.html:77
+msgid "Email address"
+msgstr "عنوان البريد الإلكتروني"
+
+#: infomapnode/templates/policy.html:78
+msgid "Phone number"
+msgstr "رقم الهاتف"
+
+#: infomapnode/templates/policy.html:79
+msgid "Physical address"
+msgstr "العنوان الفعلي"
+
+#: infomapnode/templates/policy.html:80
+msgid "Technical information"
+msgstr "معلومات تقنية"
+
+#: infomapnode/templates/policy.html:82
+msgid ""
+"\n"
+"    We may also ask for additional information including the nature of any "
+"enquiries or complaints you may make. We endeavor\n"
+"    to only collect relevant data.\n"
+msgstr ""
+"\n"
+"قد نطلب أيضا معلومات إضافية بما في ذلك طبيعة أي استفسارات أو شكاوى قد "
+"تقدمها. نحن نسعى\n"
+"    لجمع البيانات ذات الصلة فقط.\n"
+
+#: infomapnode/templates/policy.html:87
+msgid "Data processing by the InfoMAPNode geoportal"
+msgstr "معالجة البيانات بواسطة البوابة الجغرافية InfoMAPNode"
+
+#: infomapnode/templates/policy.html:89
+msgid ""
+"\n"
+"        Data are collected and exchanged during each visit to the "
+"InfoMAPNode geoportal. The INFO/RAC geoportal\n"
+"        automatically collects and stores data transmitted from your browser "
+"to our server. This includes:\n"
+"    "
+msgstr ""
+"\n"
+"يتم جمع البيانات وتبادلها خلال كل زيارة إلى البوابة الجغرافية InfoMAPNode. "
+"البوابة الجغرافية INFO/RAC\n"
+"        يقوم تلقائيا بجمع وتخزين البيانات المرسلة من متصفحك إلى خادمنا. وهذا "
+"يشمل:\n"
+"    "
+
+#: infomapnode/templates/policy.html:99 infomapnode/templates/policy.html:167
+msgid ""
+"\n"
+"    The INFO/RAC analyses data solely for statistical purposes in order to "
+"measure the demand for web content. It is not\n"
+"    possible to trace this data back to a specific individual. This data is "
+"not merged with other data sources. Data\n"
+"    collected from visits to the INFO/RAC website is transmitted to third "
+"parties only when required by law or court order\n"
+"    or in cases when attacks on the infrastructure of the INFO/RAC make it "
+"necessary to forward such data for the purposes\n"
+"    of legal action or criminal prosecution. Data will not be transferred "
+"for any other reason.\n"
+msgstr ""
+"\n"
+"يقوم مركز المعلومات / مركز الأنشطة الإقليمية بتحليل البيانات للأغراض "
+"الإحصائية فقط من أجل قياس الطلب على محتوى الويب. إنه ليس كذلك\n"
+"    من الممكن تتبع هذه البيانات مرة أخرى إلى فرد معين. لا يتم دمج هذه "
+"البيانات مع مصادر البيانات الأخرى. بيانات\n"
+"    يتم نقلها من الزيارات إلى موقع INFO / RAC إلى أطراف ثالثة فقط عندما يكون "
+"ذلك مطلوبا بموجب القانون أو أمر من المحكمة\n"
+"    أو في الحالات التي تجعل فيها الهجمات على البنية التحتية ل INFO / RAC من "
+"الضروري إعادة توجيه هذه البيانات للأغراض\n"
+"    من الإجراءات القانونية أو الملاحقة الجنائية. لن يتم نقل البيانات لأي سبب "
+"آخر.\n"
+
+#: infomapnode/templates/policy.html:107
+msgid "Duration of the storage of personal data"
+msgstr "مدة تخزين البيانات الشخصية"
+
+#: infomapnode/templates/policy.html:109
+msgid ""
+"\n"
+"        The INFO/RAC will store the personal data for the shortest time "
+"possible for each specific use.\n"
+"    "
+msgstr ""
+"\n"
+"سيقوم INFO / RAC بتخزين البيانات الشخصية لأقصر وقت ممكن لكل استخدام محدد.\n"
+"    "
+
+#: infomapnode/templates/policy.html:113
+msgid "Cookies"
+msgstr " ملفات تعريف الارتباط"
+
+#: infomapnode/templates/policy.html:115
+msgid ""
+"\n"
+"        Session cookies are small information units stored by the provider "
+"in the main memory of the user's computer. A\n"
+"        session cookie contains a randomly generated unique identification "
+"number, a so-called session ID. A cookie also\n"
+"        contains data on its origin and the storage period. These cookies "
+"cannot store any other data.\n"
+"    "
+msgstr ""
+"\n"
+"ملفات تعريف ارتباط الجلسة هي وحدات معلومات صغيرة يخزنها الموفر في الذاكرة "
+"الرئيسية لجهاز الكمبيوتر الخاص بالمستخدم. A\n"
+"        يحتوي ملف تعريف ارتباط الجلسة على رقم تعريف فريد تم إنشاؤه عشوائيا ، "
+"وهو ما يسمى معرف الجلسة. ملف تعريف الارتباط أيضا\n"
+"        يحتوي على بيانات عن أصله وفترة التخزين. لا يمكن لملفات تعريف "
+"الارتباط هذه تخزين أي بيانات أخرى.\n"
+"    "
+
+#: infomapnode/templates/policy.html:122
+msgid ""
+"\n"
+"        Other providers use permanent cookies to recognise visitors "
+"returning after a longer period of time. This\n"
+"        information is stored as a text file on the hard drive of the user's "
+"computer. In contrast, the session cookies used\n"
+"        by the INFO/RAC are deleted when the session is terminated.\n"
+"    "
+msgstr ""
+"\n"
+"يستخدم مقدمو الخدمة الآخرون ملفات تعريف الارتباط الدائمة للتعرف على الزوار "
+"العائدين بعد فترة زمنية أطول. هذا\n"
+"        يتم تخزين المعلومات كملف نصي على القرص الصلب لجهاز الكمبيوتر الخاص "
+"بالمستخدم. في المقابل ، استخدمت ملفات تعريف الارتباط للجلسة\n"
+"        بواسطة INFO / RAC يتم حذفها عند إنهاء الجلسة.\n"
+"    "
+
+#: infomapnode/templates/policy.html:129
+msgid ""
+"\n"
+"        Cookies can be controlled by all internet browsers. Most browsers "
+"are configured to accept all cookies without\n"
+"        prompting the user.\n"
+"    "
+msgstr ""
+"\n"
+"يمكن التحكم في ملفات تعريف الارتباط بواسطة جميع متصفحات الإنترنت. يتم تكوين "
+"معظم المتصفحات لقبول جميع ملفات تعريف الارتباط بدون\n"
+"        مطالبة المستخدم.\n"
+"    "
+
+#: infomapnode/templates/policy.html:135
+msgid ""
+"\n"
+"        You may choose to refuse cookies but, if you do so, some of the "
+"functionalities may not longer be available to you.\n"
+"    "
+msgstr ""
+"\n"
+"يمكنك اختيار رفض ملفات تعريف الارتباط ، ولكن إذا قمت بذلك ، فقد لا تكون بعض "
+"الوظائف متاحة لك بعد الآن.\n"
+"    "
+
+#: infomapnode/templates/policy.html:139
+msgid "How we store your personal data"
+msgstr "كيف نخزن بياناتك الشخصية"
+
+#: infomapnode/templates/policy.html:141
+msgid ""
+"\n"
+"        All information you provide us with is stored on our secure servers "
+"located in the European Union. Where we have\n"
+"        given you (or where you have chosen) a password which allows you to "
+"access certain parts of our Website, you are\n"
+"        responsible for keeping this password confidential. We ask you not "
+"to share a password with anyone.\n"
+"    "
+msgstr ""
+"\n"
+"يتم تخزين جميع المعلومات التي تزودنا بها على خوادمنا الآمنة الموجودة في "
+"الاتحاد الأوروبي. أين لدينا\n"
+"        منحك (أو المكان الذي اخترته) كلمة مرور تسمح لك بالوصول إلى أجزاء "
+"معينة من موقعنا ، فأنت\n"
+"        مسؤول عن الحفاظ على سرية كلمة المرور هذه. نطلب منك عدم مشاركة كلمة "
+"المرور مع أي شخص.\n"
+"    "
+
+#: infomapnode/templates/policy.html:147
+msgid "What rights do you have?"
+msgstr "ما هي حقوقك؟"
+
+#: infomapnode/templates/policy.html:149
+msgid ""
+"\n"
+"        As a data subject, you have the following rights:\n"
+"    "
+msgstr ""
+"\n"
+"بصفتك صاحب البيانات ، لديك الحقوق التالية:\n"
+"    "
+
+#: infomapnode/templates/policy.html:154
+msgid "the right of access to personal data relating to you;"
+msgstr "الحق في الوصول إلى البيانات الشخصية المتعلقة بك ؛"
+
+#: infomapnode/templates/policy.html:155
+msgid ""
+"the right to update your personal data or correct any mistakes in your "
+"personal data;"
+msgstr "الحق في تحديث بياناتك الشخصية أو تصحيح أي أخطاء في بياناتك الشخصية ؛"
+
+#: infomapnode/templates/policy.html:156
+msgid "the right to ask us to stop contacting you;"
+msgstr "الحق في مطالبتنا بالتوقف عن الاتصال بك؛"
+
+#: infomapnode/templates/policy.html:157
+msgid "rights in relation to automated decision taking;"
+msgstr "الحقوق المتعلقة باتخاذ القرار الآلي ؛"
+
+#: infomapnode/templates/policy.html:158
+msgid "the right to restrict or prevent your personal data being processed;"
+msgstr "الحق في تقييد أو منع معالجة بياناتك الشخصية؛"
+
+#: infomapnode/templates/policy.html:159
+msgid "the right to have your personal data ported to another data controller;"
+msgstr "الحق في نقل بياناتك الشخصية إلى وحدة تحكم بيانات أخرى ؛"
+
+#: infomapnode/templates/policy.html:160
+msgid "the right to erasure; and"
+msgstr "الحق في المحو ؛ و"
+
+#: infomapnode/templates/policy.html:162
+msgid ""
+"\n"
+"            the right to complain to the Data Protection Controller if you "
+"believe we have not handled your personal data in accordance with the "
+"Legislation.\n"
+"        "
+msgstr ""
+"\n"
+"الحق في تقديم شكوى إلى مراقب حماية البيانات إذا كنت تعتقد أننا لم نتعامل مع "
+"بياناتك الشخصية وفقا للتشريع.\n"
+"        "
+
+#: infomapnode/templates/policy.html:175
+msgid "Right to information"
+msgstr "الحق في الحصول على المعلومات"
+
+#: infomapnode/templates/policy.html:177
+msgid ""
+"\n"
+"        At any time, you have the right to obtain information on the data "
+"stored about you, its origin and recipients and\n"
+"        the purpose of the storage. Information on the data stored can be "
+"obtained from the central data protection team\n"
+"        (email to <a href=\"mailto:info@info-rac.org\">info@info-rac.org</"
+"a>).\n"
+"    "
+msgstr ""
+"يحق لك في أي وقت الحصول على معلومات حول البيانات المخزنة عنك وأصلها "
+"ومستلميها و\n"
+"        الغرض من التخزين. يمكن الحصول على معلومات حول البيانات المخزنة من "
+"فريق حماية البيانات المركزي\n"
+"        (البريد الإلكتروني <a href=\"mailto:info@info-rac.org\">إلى "
+"info@info-rac.org</a>).\n"
+"    "
+
+#: infomapnode/templates/policy.html:184
+msgid ""
+"\n"
+"        Requests for your personal data must be made to us specifying what "
+"personal data you need access to, and a copy will\n"
+"        be retained on our files. To help us locate the information, please "
+"give us as much information as possible about\n"
+"        the type of information you would like to see.\n"
+"    "
+msgstr ""
+"\n"
+"يجب تقديم طلبات للحصول على بياناتك الشخصية إلينا مع تحديد البيانات الشخصية "
+"التي تحتاج إلى الوصول إليها ، وسوف يتم إصدار نسخة منها\n"
+"        يتم الاحتفاظ بها في ملفاتنا. لمساعدتنا في تحديد موقع المعلومات ، "
+"يرجى تزويدنا بأكبر قدر ممكن من المعلومات حول\n"
+"        نوع المعلومات التي ترغب في رؤيتها.\n"
+"    "
+
+#: infomapnode/templates/policy.html:191
+msgid ""
+"\n"
+"        If, to comply with your request, we would have to disclose "
+"information relating to or identifying another person, we\n"
+"        may need to obtain the consent of that person, if possible. If we "
+"cannot obtain consent, we may need to withhold\n"
+"        that information or edit the data to remove the identity of that "
+"person, if possible.\n"
+"    "
+msgstr ""
+"\n"
+"إذا كان علينا ، للامتثال لطلبك ، الكشف عن المعلومات المتعلقة بشخص آخر أو "
+"تحديد هويته ، فإننا\n"
+"        قد تحتاج إلى الحصول على موافقة هذا الشخص ، إن أمكن. إذا لم نتمكن من "
+"الحصول على الموافقة ، فقد نحتاج إلى حجب\n"
+"        تلك المعلومات أو تحرير البيانات لإزالة هوية هذا الشخص ، إن أمكن.\n"
+"    "
+
+#: infomapnode/templates/policy.html:198
+msgid ""
+"\n"
+"        Right to correct your personal data or correct any mistakes in your "
+"personal data.\n"
+"    "
+msgstr ""
+"\n"
+"الحق في تصحيح بياناتك الشخصية أو تصحيح أي أخطاء في بياناتك الشخصية.\n"
+"    "
+
+#: infomapnode/templates/policy.html:203
+msgid ""
+"\n"
+"        If you would like to do so, please:\n"
+"    "
+msgstr ""
+"\n"
+"إذا كنت ترغب في القيام بذلك، يرجى:\n"
+"    "
+
+#: infomapnode/templates/policy.html:208
+msgid ""
+"email us (to <a href=\"mailto:info@info-rac.org\">info@info-rac.org</a>);"
+msgstr ""
+"مراسلتنا عبر البريد الإلكتروني (إلى <a href=\"mailto:info@info-rac."
+"org\">info@info-rac.org</a>) ؛"
+
+#: infomapnode/templates/policy.html:209
+msgid ""
+"Include enough information to identify you (e.g. name, registration "
+"details); and"
+msgstr "تضمين معلومات كافية لتحديد هويتك (مثل الاسم وتفاصيل التسجيل) ؛ و"
+
+#: infomapnode/templates/policy.html:210
+msgid ""
+"Specify which information is incorrect and what it should be replaced with."
+msgstr "حدد المعلومات غير الصحيحة وما يجب استبداله به."
+
+#: infomapnode/templates/policy.html:212
+msgid ""
+"\n"
+"    If we are required to update your personal data, we will inform "
+"recipients to whom that personal data have been\n"
+"    disclosed (if any), unless this proves impossible or has a "
+"disproportionate effort.\n"
+msgstr ""
+"\n"
+"إذا طلب منا تحديث بياناتك الشخصية ، فسنبلغ المستلمين الذين كانت هذه البيانات "
+"الشخصية لهم\n"
+"    تم الكشف عنها (إن وجدت) ، ما لم يثبت أن هذا مستحيل أو لديه جهد غير "
+"متناسب.\n"
+
+#: infomapnode/templates/policy.html:218
+msgid ""
+"\n"
+"        It is your responsibility that all of the personal data provided to "
+"us is accurate and complete. If any information\n"
+"        you have given us changes, please let us know as soon as possible "
+"(Contact us).\n"
+"    "
+msgstr ""
+"\n"
+"تقع على عاتقك مسؤولية أن تكون جميع البيانات الشخصية المقدمة إلينا دقيقة "
+"وكاملة. إذا كان هناك أي معلومات\n"
+"        لقد قدمت لنا تغييرات ، يرجى إعلامنا في أقرب وقت ممكن (اتصل بنا).\n"
+"    "
+
+#: infomapnode/templates/policy.html:223
+msgid "Right to erasure"
+msgstr "الحق في المحو"
+
+#: infomapnode/templates/policy.html:225
+msgid ""
+"\n"
+"        In accordance with the Data Protection Legislation, you can ask us "
+"to erase your personal data where:\n"
+"    "
+msgstr ""
+"\n"
+"وفقا لقانون حماية البيانات ، يمكنك أن تطلب منا مسح بياناتك الشخصية حيث:\n"
+"    "
+
+#: infomapnode/templates/policy.html:231
+msgid ""
+"\n"
+"            you do not believe that we need your personal data in order to "
+"process it for the purposes set out in thisPolicy;\n"
+"        "
+msgstr ""
+"\n"
+"لا تعتقد أننا بحاجة إلى بياناتك الشخصية من أجل معالجتها للأغراض المنصوص "
+"عليها في هذه السياسة ؛\n"
+"        "
+
+#: infomapnode/templates/policy.html:236
+msgid ""
+"\n"
+"            if you had given us consent to process your personal data, you "
+"withdraw that consent and we cannot otherwise legally process your personal "
+"data;</li>\n"
+"        "
+msgstr ""
+"إذا كنت قد منحتنا الموافقة على معالجة بياناتك الشخصية ، فإنك تسحب هذه "
+"الموافقة ولا يمكننا معالجة بياناتك الشخصية بشكل قانوني ؛\n"
+"        "
+
+#: infomapnode/templates/policy.html:240
+msgid ""
+"\n"
+"            you object to our processing and we do not have any legal basis "
+"for continuing to process your personal data;\n"
+"        "
+msgstr ""
+"\n"
+"أنت تعترض على معالجتنا وليس لدينا أي أساس قانوني لمواصلة معالجة بياناتك "
+"الشخصية ؛\n"
+"        "
+
+#: infomapnode/templates/policy.html:245
+msgid ""
+"\n"
+"            your data has been processed unlawfully or have not been erased "
+"when it should have been; or\n"
+"        "
+msgstr ""
+"\n"
+"تمت معالجة بياناتك بشكل غير قانوني أو لم يتم محوها في الوقت الذي كان ينبغي "
+"أن يتم فيه ؛ أو\n"
+"        "
+
+#: infomapnode/templates/policy.html:250
+msgid ""
+"\n"
+"            the personal data have to be erased to comply with law.\n"
+"        "
+msgstr ""
+"\n"
+"يجب مسح البيانات الشخصية للامتثال للقانون.\n"
+"        "
+
+#: infomapnode/templates/policy.html:255
+msgid ""
+"\n"
+"    We may continue to process your personal data in certain circumstances "
+"in accordance with Data Protection Legislation.\n"
+msgstr ""
+"\n"
+"قد نستمر في معالجة بياناتك الشخصية في ظروف معينة وفقا لقانون حماية "
+"البيانات.\n"
+
+#: infomapnode/templates/policy.html:260
+msgid ""
+"\n"
+"        Where you have requested the erasure of your personal data, we will "
+"inform recipients to whom that personal data\n"
+"        have been disclosed, unless this proves impossible or involves "
+"disproportionate effort. We will also inform you\n"
+"        about those recipients if you request it.\n"
+"    "
+msgstr ""
+"\n"
+"عندما تطلب محو بياناتك الشخصية ، سنبلغ المستلمين الذين لهم تلك البيانات "
+"الشخصية\n"
+"        تم الكشف عنها ، ما لم يثبت أن ذلك مستحيل أو ينطوي على جهد غير "
+"متناسب. سنبلغك أيضا\n"
+"        حول هؤلاء المستلمين إذا طلبت ذلك.\n"
+"    "
+
+#: infomapnode/templates/policy.html:266
+msgid "Changes to the policy"
+msgstr "التغييرات التي تطرأ على السياسة"
+
+#: infomapnode/templates/policy.html:268
+msgid ""
+"\n"
+"        This Policy may be updated or changed from time to time at the INFO/"
+"RAC's sole discretion. The date of the most\n"
+"        recent revisions will appear on this page. If you do not agree to "
+"these changes, please do not continue to use this\n"
+"        InfoMAPNode to submit personal information. If material changes are "
+"made to the Policy, we will notify you by\n"
+"        placing a prominent notice on the Website or sending you a "
+"notification in relation to this. We will not process\n"
+"        your personal data in a manner not contemplated by this Policy "
+"without your consent.\n"
+"    "
+msgstr ""
+"\n"
+"قد يتم تحديث هذه السياسة أو تغييرها من وقت لآخر وفقا لتقدير INFO / RAC "
+"وحدها. تاريخ الأكثر\n"
+"        ستظهر المراجعات الأخيرة على هذه الصفحة. إذا كنت لا توافق على هذه "
+"التغييرات ، فيرجى عدم الاستمرار في استخدام هذا\n"
+"        InfoMAPode لتقديم المعلومات الشخصية. إذا تم إجراء تغييرات جوهرية على "
+"السياسة ، فسنخطرك عن طريق\n"
+"        وضع إشعار بارز على الموقع الإلكتروني أو إرسال إشعار إليك فيما يتعلق "
+"بذلك. لن نقوم بمعالجة\n"
+"        بياناتك الشخصية بطريقة لا تتوخى في هذه السياسة دون موافقتك.\n"
+"    "
+
+#: infomapnode/templates/policy.html:277
+msgid "Updated to May 2019."
+msgstr "تم التحديث حتى مايو 2019."

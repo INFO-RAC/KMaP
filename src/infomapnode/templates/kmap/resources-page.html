@@ -1,0 +1,122 @@
+{% extends "page.html" %}
+{% load i18n %}
+{% load static %}
+{% load client_version %}
+{% block extra_style %}
+    <link href="{% static 'fonts/titilliumweb.css' %}" rel="stylesheet">
+{% endblock %}
+{% block container %}
+<style>
+    h2.kmap-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        color: var(--gn-primary);
+        text-align: center;
+    }
+    #ms-container {
+        position: relative;
+        border:1px solid #ddd;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        z-index: 0;
+    }
+    #ms-container .gn-card-grid .gn-card-grid-container {
+        min-height: auto;
+    }
+    .msgapi hr {
+        margin: 1rem 0;
+    }
+    .theme-label {
+        font-weight: bold;
+        margin-top: 0.5rem;
+        font-size: 1.1rem;
+    }
+    #gn-components, #gn-catalogue {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: unset;
+    }
+    .gn-resources-filter {
+        box-shadow: 0.15rem 0 0.25rem rgba(0,0,0,.08);
+        border-right: 1px solid rgba(0,0,0,.125);
+    }
+    .gn-resources-filter .gn-tabs>.nav {
+        position: unset;
+    }
+    #ms-container .facet.active:hover{
+        background-color: var(--gn-primary,#397aab);
+        color: white;
+    }
+    .container .section-text {
+        padding-top: 20px;
+        text-align: justify;
+        color: var(--gn-primary);
+    }
+    .container .section-text h4 {
+        line-height: 1.4rem;
+    }
+</style>
+<section>
+    <div class="container">
+        <div class="section-text">
+            {% if request.path == '/resources/' %}
+                <h4>{% trans 'Through this page you can navigate all the resources of the KMaP, both geographical and non geographical.' %}</h4>
+            {% elif request.path == '/maps/' %}
+                <h4>{% trans 'Through this page you can navigate the geographical layers by theme and catalog. Different sources are available through filters: vector, raster, remote services, time series and superimposition of geographical layers (GeoNode Maps).' %}</h4>
+            {% elif request.path == '/dashboards/' %}
+                <h4>{% trans 'Through this page you can navigate available dashboards as tools for the analysis of data contained into geographical layers and tables. Maps, graphs, tables, texts and images can all be part of a dashboard.' %}</h4>
+            {% elif request.path == '/geostories/' %}
+                <h4>{% trans 'Through this page you can navigate available geostories, navigating them by theme and a map, which geolocalizes stories told in the geostory. Inside these versatile instruments you can find embedded images, videos, texts, maps, responsive websites and dashboards.' %}</h4>
+            {% elif request.path == '/libraries/' %}
+                <h4>{% trans 'Through this page you can browse the UNEP-MAP documental heritage. Documents from all the RACs’ libraries can be parsed here, while indexed for title, abstract, keywords and, where available, the whole text of the document.' %}</h4>
+            {% endif %}
+        </div>
+        {% block navigate_by_theme %}
+            {% include "./snippets/navigate-by-theme.html" %}
+            <div class="row">
+                <div class="col-xs-12 divider">
+                    <hr/>
+                </div>
+            </div>
+        {% endblock %}
+        {% block resource %}
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="kmap-title">{% block resource_title %}{% trans 'NAVIGATE BY CATALOG' %}{% endblock %}</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="ms-container" ></div>
+                </div>
+            </div>
+            {% block resource_script %}
+            {% endblock %}
+        {% endblock %}
+        {% if request.path == '/resources/' or request.path == '/maps/' or request.path == '/libraries/' or request.path == '/dashboards/' or request.path == '/geostories/' %}
+            <div class="row">
+                <div class="col-xs-12">
+                    <hr/>
+                </div>
+            </div>
+            {% include "./snippets/recent-resources.html" %}
+        {% endif %}
+    </div>
+</section>
+<section>
+    {% include "./snippets/footer-policy.html" %}
+</section>
+{% endblock %}
+
+{% block ms_scripts %}
+    {% if request.path == '/resources/' or request.path == '/maps/' or request.path == '/libraries/' or request.path == '/dashboards/' or request.path == '/network/' %}
+        <script id="gn-script" src="{% static 'mapstore/dist/js/gn-components.js' %}?{% client_version %}"></script>
+    {% elif request.path == '/geostories/' %}
+        <script id="gn-script" src="{% static 'mapstore/dist/js/gn-catalogue.js' %}?{% client_version %}"></script>
+    {% endif %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

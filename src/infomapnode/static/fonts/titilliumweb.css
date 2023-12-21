@@ -1,0 +1,73 @@
+
+/* TitilliumWeb - BoldItalic */
+@font-face {
+    font-display: swap;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./TitilliumWeb-Bold.ttf') format('truetype');
+  }
+  /* TitilliumWeb BoldItalic*/
+  @font-face {
+    
+    font-family: 'Titillium Web';
+    font-style: italic;
+    font-weight: 700;
+    src: url('./TitilliumWeb-BoldItalic.ttf') format('truetype');
+  }
+  /* TitilliumWeb ExtraLight*/
+  @font-face {
+    font-display: swap;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 200;
+    src: url('./TitilliumWeb-ExtraLight.ttf') format('truetype');
+  }
+  /* TitilliumWeb ExtraLightItalic*/
+  @font-face {
+    font-display: swap;
+    font-family: 'Titillium Web';
+    font-style: italic;
+    font-weight: 200;
+    src: url('./TitilliumWeb-ExtraLightItalic.ttf') format('truetype');
+  }
+  /* TitilliumWeb Regular Italic*/
+  @font-face {
+    font-display: swap;
+    font-family: 'Titillium Web';
+    font-style: italic;
+    font-weight: 400;
+    src: url('./TitilliumWeb-Italic.ttf') format('truetype');
+  }
+  /* TitilliumWeb LightItalic*/
+  @font-face {
+    font-display: swap;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./TitilliumWeb-Light.ttf') format('truetype');
+  }
+  /* TitilliumWeb Regular*/
+  @font-face {
+     font-display: swap;
+     font-family: 'Titillium Web';
+     font-style: normal;
+     font-weight: 400;
+     src: url('./TitilliumWeb-Regular.ttf') format('truetype');
+   }
+   /* TitilliumWeb SemiBold*/
+  @font-face {
+     font-display: swap;
+     font-family: 'Titillium Web';
+     font-style: normal;
+     font-weight: 600;
+     src: url('./TitilliumWeb-SemiBold.ttf') format('truetype');
+   }
+   /* TitilliumWeb Regular*/
+  @font-face {
+     font-display: swap;
+     font-family: 'Titillium Web';
+     font-style: italic;
+     font-weight: 600;
+     src: url('./TitilliumWeb-SemiBoldItalic.ttf') format('truetype');
+   }

@@ -1,0 +1,70 @@
+{% load get_menu_json %}
+<nav id="{{ id|default:'' }}" class="gn-menu gn-menu-symmetric gn-primary" data-gn-menu-resize="true">
+    <div class="gn-menu-container">
+        <div class="gn-menu-content">
+            <div class="gn-menu-content-left">
+
+            </div>
+            <div class="gn-menu-content-center">
+                {% block center_menu %}
+                <ul class="gn-menu-list">
+                    {% if request.path == '/resources/' %}
+                    <li>
+                        <a id="library" href="#" target="" class="nav-link btn btn-primary selected">
+                            ALL RESOURCES
+                        </a>
+                    </li>
+                    {% elif request.path == '/maps/' or request.path == '/geostories/' or request.path == '/dashboards/' %}
+                    <li>
+                        <a id="maps" href="/maps/" target="" class="nav-link btn btn-primary{% if request.path == '/maps/'%} selected{% endif %}">
+                            MAPS
+                        </a>
+                    </li>
+                    <li>
+                        <a id="dashboards" href="/dashboards/" target="" class="nav-link btn btn-primary{% if request.path == '/dashboards/'%} selected{% endif %}">
+                            DASHBOARDS
+                        </a>
+                    </li>
+                    <li>
+                        <a id="geostories" href="/geostories/" target="" class="nav-link btn btn-primary{% if request.path == '/geostories/'%} selected{% endif %}">
+                            GEOSTORIES
+                        </a>
+                    </li>
+                    
+                    {% elif request.path == '/libraries/' %}
+                    <li>
+                        <a id="library" href="#" target="" class="nav-link btn btn-primary selected">
+                            LIBRARY
+                        </a>
+                    </li>
+                    {% elif request.path == '/network/' %}
+                    <li>
+                        <a id="network" href="#" target="" class="nav-link btn btn-primary selected">
+                            NETWORK
+                        </a>
+                    </li>
+                    {% else %}
+                    {% endif %}
+                </ul>
+                {% endblock %}
+            </div>
+            <div class="gn-menu-content-right">
+                <div class="gn-menu-content-right">
+                    {% block right_menu %}
+                    <ul class="gn-menu-list">
+                        {% block language_selector %}
+                            {% include './language_selector.html' with variant='primary' align_right=True %}
+                        {% endblock %}
+                    </ul>
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<style>
+    #{{ id|default:'' }} .nav-link.selected {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+</style>
