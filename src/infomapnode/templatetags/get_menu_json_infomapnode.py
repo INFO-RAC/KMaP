@@ -10,18 +10,24 @@ def get_user_menu_extended(context):
     menu = _get_user_menu(context)
     
     user = _get_request_user(context)
-    if user and user.is_authenticated and user.is_superuser:
+    if user and user.is_authenticated:
         menu_items = []
+        catalog_item = {
+                        'type': 'link',
+                        'href': '/catalogue/',	
+                        'label': 'Catalogue'
+                    }
         if len(menu):
             items = menu[0]['items']
             for item in items:
                 menu_items.append(item)
-                if item['type'] == 'link' and item['href'] == '/admin/':
-                    menu_items.append({
-                        'type': 'link',
-                        'href': '/catalogue/',
-                        'label': 'Catalogue'
-                    })
+                if user.is_superuser:
+                    if catalog_item not in menu_items and item['type'] == 'link' and item['href'] == '/admin/':
+                        menu_items.append(catalog_item)
+                elif 'add_resource' in user.perms:
+                    if catalog_item not in menu_items and  item['type'] == 'divider':
+                        menu_items.append(catalog_item)
+                        menu_items.append({"type": "divider"})
             menu[0]['items'] = menu_items
     
     return menu

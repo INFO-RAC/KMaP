@@ -71,6 +71,20 @@
                 padding: 40px;
             }
         }
+
+	.homepage-featured-items{
+		display: block;
+	}
+	.homepage-featured-items .gn-card-grid-container > h3{
+		display: none;
+	}
+	.homepage-featured-items .gn-card-grid-container > ul{
+		justify-content: center;
+	}
+	.gn-card-grid{
+		padding-top: 0 !important;
+		margin-top: -5px;
+	}
     </style>
     <div class="gn-container">
         <div class="gn-content">
@@ -139,11 +153,21 @@
                     </li>
                 </ul>
             </div>
+
+	    <div class="gn-wave-divider light"><img src="{% static 'img/wave.svg' %}"/></div>
+	    <div class="home-dataset-themes">
+		<h1>ON ROLL ON KMaP</h1>
+	    </div>
+	    <div class="gn-container">
+            	<div id="gn-home-featured-resources-grid" class="homepage-featured-items" style="display: block!important" ></div>
+                <div id="gn-home-resources-grid"></div>
+            </div>
+
             <div class="gn-wave-divider"><img src="{% static 'img/wave.svg' %}"/></div>
             <div class="footer">
                 <div class="logos">
                     <a href="https://www.unep.org/unepmap/" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/footer/unep.png' %}"/></a>
-                    <a href="http://www.info-rac.org/en" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/footer/info-rac.png' %}"/></a>
+                    <a href="http://www.info-rac.org" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/footer/info-rac.png' %}"/></a>
                     <a href="https://www.paprac.org/" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/footer/paprac.png' %}"/></a>
                     <a href="https://planbleu.org/" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/footer/planbleu.png' %}"/></a>
                     <a href="https://www.medwaves-centre.org/" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/footer/medwaves-center.png' %}"/></a>
