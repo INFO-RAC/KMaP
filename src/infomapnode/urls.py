@@ -19,17 +19,21 @@
 #########################################################################
 
 from django.views.generic import TemplateView
-from django.conf.urls import url, include
+#from django.conf.urls import url, include
+from django.urls import include, re_path
 from geonode.urls import urlpatterns
 
 urlpatterns += [
-    url(r'^policy/', TemplateView.as_view(template_name='policy.html')),
-    url(r'^guideline/', TemplateView.as_view(template_name='guideline.html')),
+    #url(r'^policy/', TemplateView.as_view(template_name='policy.html')),
+    re_path(r'^policy/', TemplateView.as_view(template_name='policy.html')),
+    #url(r'^guideline/', TemplateView.as_view(template_name='guideline.html')),
+    re_path(r'^guideline/', TemplateView.as_view(template_name='guideline.html')),
     # these paths hinders with subsite path configuration
     #url(r'^maps/', TemplateView.as_view(template_name='kmap/maps.html')),
     #url(r'^dashboards/', TemplateView.as_view(template_name='kmap/dashboards.html')),
     #url(r'^geostories/', TemplateView.as_view(template_name='kmap/geostories.html')),
     #url(r'^library/', TemplateView.as_view(template_name='kmap/library.html')),
     #url(r'^network/', TemplateView.as_view(template_name='kmap/network.html')),
-    url(r"", include("subsites.urls")),
+    #url(r"", include("subsites.urls")),
+    re_path(r"", include("subsites.urls")),
 ]

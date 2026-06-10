@@ -1,0 +1,432 @@
+<style>
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: "Titillium Web", sans-serif;
+  box-sizing: border-box;
+}
+
+h1{
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.container-tabs {
+  padding: 0 0 1rem 0;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  overflow: auto;
+}
+
+.tabs .tab-item {
+  width: calc(33.33% - 0.66rem);
+  text-align: center;
+  border-bottom: 3px solid #777;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 0.25rem;
+  background: #eee;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tabs .tab-item:hover {
+  background: #ddd;
+}
+
+.tabs .tab-item.active {
+  background: #1D2E5C;
+  border-bottom-color: #000044;
+  color: #fff;
+}
+
+.container-tabs .btn {
+  background: #1D2E5C !important;
+  border-bottom: 2px solid #000044 !important;
+  display: inline-block !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  padding: 0.65rem 1rem !important;
+  border-radius: 0.25rem !important;
+}
+
+.learn {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  margin-top: 1.75rem;
+}
+
+.learn .left {
+  width: 40%;
+  min-width: 40%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.learn .right {
+  padding: 2rem 2rem 4rem 2rem;
+}
+
+.learn .right h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.tab-content {
+  display: none;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tab-content.active {
+  display: flex;
+}
+
+.tab-content-item {
+  width: calc(33.33% - 0.67rem);
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+  background: #fff;
+}
+
+.tab-content-item h3{
+  font-size: 1.25rem;
+}
+
+@media(max-width: 990px){
+  .tabs .tab-item{
+      width: auto;
+  }
+  .tab-content-item  {
+      width: 100%;
+  }
+}
+
+.tab-content-item.tab-content-item--nopadding{
+  padding: 0;
+}
+
+.tab-content-inner{
+  padding: 0.65rem 1.5rem 1.5rem 1.5rem;
+}
+
+.tab-content-item--nopadding img{
+  max-width: 100%;
+  display: block;
+}
+
+.tab-content-item .img-placeholder {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0bb0cb;
+}
+
+.tab-content-item .img-placeholder img{
+  max-width: 3.5rem;
+  max-height: 3.5rem;
+}
+
+.tab-content-item h3 a{
+  color: #000;
+  position: relative;
+  padding-right: 2rem;
+  text-decoration: none;
+}
+
+.tab-content-item h3 a:hover{
+  text-decoration: underline;
+}
+
+.tab-content-item h3 a:after{
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-image: url(/static/img/network/link2.svg);
+  background-position: center center;
+  right: 0.75rem;
+  top: 50%;
+  margin-top: -0.45rem;
+  background-size: cover;
+  position: absolute;
+}
+
+.learn-image{
+  height: 6.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.learn-image img{
+  width: 100%;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+}
+
+.tab-content-item.tab-content-item--double{
+  width: 100%;
+  position: relative;
+  min-height: 18rem;
+}
+
+.news-content-left{
+  width: 32%;
+  padding-right: 1.25rem;
+}
+
+.news-content-right{
+  width: 68%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-height: 100%;
+  min-height: 100%;
+  border-radius: 0 0.25rem 0.25rem 0;
+  border-left: 1px solid #eee;
+  overflow-y: scroll;
+}
+
+.news-content-right .news-content-item{
+  padding: 1.25rem ;
+  margin-bottom: 2px;
+  border-left: 3px solid #ddd;
+  display: block;
+  text-decoration: none;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.news-content-right .news-content-item:hover{
+  border-left-color: #1D2E5C;
+  background: #f9f9f9;
+}
+
+.news-content-right .news-content-item:hover .news-content-item--title{
+  color: #1D2E5C;
+}
+
+.news-content-right .news-content-item:first-child{
+  padding-top: 1.25rem;
+}
+.news-content-right .news-content-item:last-child{
+  border-bottom: unset;
+}
+
+.news-content-item--title{
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.44;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.news-content-tag span{
+  display: inline-block;
+  padding: 0.125rem 0.3rem;
+  border-radius: 0.2rem;
+  background: #eee;
+  font-size: 0.8rem;
+  margin-right: 0.25rem;
+}
+
+@media(max-width: 990px){
+  .news-content-left{
+    width: 100%;
+    padding-bottom: 1.25rem;
+  }
+
+  .news-content-right{
+    position: relative;
+    width: calc(100% + 2.5rem);
+    max-height: 16rem;
+    overflow: auto;
+    height: 16rem;
+    min-height: auto;
+    margin: -1.25rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid #ccc;
+  }
+}
+
+</style>
+
+<div class="container-tabs">
+   <div class="container" style="padding: 0">
+	<div class="section-text" style="padding-top: 0; margin-top: 0;"> <h4>Through this page you can find a selection of some useful links for citizens, stakeholders and scientists. Both you're looking for instruments, selected datasets or more information about a specific topic you will find here resources that will enable you to grow and contribute to the UNEP-MAP.</h4></div>
+	<div class="section-text"></div>
+      <div class="tabs">
+         <div class="tab-item active" data-id="cittadini">Citizens</div>
+         <div class="tab-item" data-id="stakeholders">Stakeholders</div>
+         <div class="tab-item" data-id="scientists">Scientists</div>
+      </div>
+      <div class="tab-content" id="stakeholders">
+          <div class="tab-content-item tab-content-item--nopadding">
+              <div class="learn-image" >
+                  <img src="/static/img/network/kmap_learn_image.jpg" />
+              </div>
+              <div class="tab-content-inner">
+                  <h3><a href='https://training.info-rac.org/' target="_blank" >Learn</a></h3>
+                  <p>A dedicated e-learning platform to get more info and deepen in knowledge by means of specialized courses</p>
+              </div>
+          </div>
+         <div class="tab-content-item ">
+            <div class="img-placeholder"><img src='/static/img/network/forum.svg' alt='Forum' /></div>
+            <h3><a target="_blank" href='https://discord.com/channels/1296389196403048529/1296389196403048531' >Discussion forum</a></h3>
+            <p>Are you curious about our activities? Do you want to pose specific questions? Please write here</p>
+         </div>
+         <div class="tab-content-item ">
+            <div class="img-placeholder"><img src='/static/img/network/helpdesk.svg' alt='Helpdesk' /></div>
+            <h3><a href='mailto:kmap@info-rac.org' >Helpdesk</a></h3>
+            <p>Contact us in case you need some technical support with KMaP</p>
+         </div>
+         <div class="tab-content-item ">
+            <div class="img-placeholder"><img src='/static/img/network/project_management.svg' alt='Stakeholders' /></div>
+            <h3>Project Management</h3>
+            <p>Are you executing a task by means of the KMaP? If you need to plan your time and activities use our free PMT. We exploit <a href='https://trello.com/home' target="_blank">Trello</a> capabilities, and you can request an instance anytime: <a href='mailto:kmap@info-rac.org '>contact us</a>.</p>
+         </div>
+      </div>
+      <div class="tab-content" id="scientists">
+          <div class="tab-content-item tab-content-item--double">
+            <div class="news-content-left" >
+              <div class="img-placeholder"><img src='/static/img/network/newspaper.svg' style="width: 40px" alt='News' /></div>
+              <h3>News</h3>
+              <p>Here you can find a selection of the latest scientific literature on our Mediterranean Sea</p>
+            </div>
+            <div class="news-content-right" ></div>
+          </div>
+          <div class="tab-content-item tab-content-item--nopadding">
+              <div class="learn-image" >
+                  <img src="/static/img/network/kmap_learn_image.jpg" />
+              </div>
+              <div class="tab-content-inner">
+                  <h3><a href='https://training.info-rac.org/' target="_blank" >Learn</a></h3>
+                  <p>A dedicated e-learning platform to get more info and deepen in knowledge by means of specialized courses</p>
+              </div>
+          </div>
+         <div class="tab-content-item ">
+            <div class="img-placeholder"><img src='/static/img/network/datahub.svg' alt='Data HUB' /></div>
+            <h3><a target="_blank" target="_blank"  href='https://kmap.info-rac.org/maps/#/' >Data HUB</a></h3>
+            <p>A selection of our geographical tools for you to parse</p>
+         </div>
+         <div class="tab-content-item ">
+            <div class="img-placeholder"><img src='/static/img/network/Knowledge.svg' alt='Knowledge' /></div>
+            <h3><a target="_blank" target="_blank" href='https://kmap.info-rac.org/libraries/' >Knowledge HUB</a></h3>
+            <p>A selection of our documental heritage for you to parse</p>
+         </div>
+         <div class="tab-content-item ">
+            <div class="img-placeholder"><img src='/static/img/network/jupiter.svg' alt='Jupiter Lab' /></div>
+            <h3><a href='https://jupyter.org/try-jupyter/lab/' target="_blank"  >Jupiter Lab</a></h3>
+            <p>Do you need to re elaborate our data? Feel free to do this by means of Jupyter Lab</p>
+         </div>
+         <div class="tab-content-item ">
+            <div class="img-placeholder"><img src='/static/img/network/collaboration.svg' alt='collaboration' /></div>
+            <h3><a href='mailto:info@info-rac.org' >Looking for collaboration?</a></h3>
+            <p>We particularly care for scientific community ideas. If you have a valid scientific project of want to build something on top of UNEP-MAP datasets and tools, feel free to ask!</p>
+         </div>
+      </div>
+      <div class="tab-content active" id="cittadini">
+          
+          <div class="tab-content-item tab-content-item--nopadding">
+              <div class="learn-image" >
+                  <img src="/static/img/network/kmap_learn_image.jpg" />
+              </div>
+              <div class="tab-content-inner">
+                  <h3><a href='https://training.info-rac.org/' target="_blank" >Learn</a></h3>
+                  <p>A dedicated e-learning platform to get more info and deepen in knowledge by means of specialized courses</p>
+              </div>
+          </div>
+
+          <div class="tab-content-item ">
+              <div class="img-placeholder"><img src='/static/img/network/seawatcher.svg' alt='Seawatcher' /></div>
+              <h3><a href='https://seawatcher.info-rac.org/' target="_blank" >Seawatcher App</a></h3>
+              <p>UNEP-MAP citizen science app to signal trashes and other material at sea by means of geo-referenced information</p>
+          </div>
+         <div class="tab-content-item">
+            <div class="img-placeholder"><img src='/static/img/network/giochi_bambini.svg' alt='giochi bambini' /></div>
+            <h3>For Kids</h3>
+            <p>Come and play with us!</p>
+            <ul>
+               <li><a target="_blank" href="https://coastday.net/wp-content/uploads/2021/09/TOOLKIT-MEMORY-GAME-3.pdf">Memory</a></li>
+               <li><a target="_blank" href="https://coastday.net/wp-content/uploads/2021/09/TOOLKIT-SEA-TURTLE-3.pdf">Sea turtle</a></li>
+               <li><a target="_blank" href="https://coastday.net/wp-content/uploads/2021/09/TOOLKIT-INVISIBLE-SAND-4.pdf">Invisible sand</a></li>
+               <li><a target="_blank" href="http://www.info-rac.org/coastday/banquettesquiz.html">Banquettes quiz</a></li>
+            </ul>
+         </div>
+         <div class="tab-content-item">
+            <div class="img-placeholder"><img src='/static/img/network/giochi_adulti.svg' alt='giochi adulti' /></div>
+            <h3>Quizzes</h3>
+            <p>How much you know about our Mediterranean Sea? Discover it here!</p>
+            <ul>
+               <li><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSe42YvWVS6zv_pCbVMyGrP-2HxzGhny4tazma6PpMYW7Eha6g/viewform">Coast & Ocean quiz</a></li>
+               <li><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeeiUxkZTUi_Lz4HKgCAvk-V8M-7BiLD_2Sx_mzZ9H7gwW1qw/viewform">Ocean & art quiz</a></li>
+               <li><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdHI0Zj11wRfo04eNHeSjtYc5HtkmPWLBos8gQq2_rbofVDtQ/viewform">Yesterday, today and tomorrow</a></li>
+            </ul>
+         </div>
+         <div class="tab-content-item">
+            <div class="img-placeholder"><img src='/static/img/network/newsletter.svg' alt='newsletter' /></div>
+            <h3><a target="_blank" href='http://www.mednews.info-rac.org/' >Mednews</a></h3>
+            <p>Get updated with our latest activities and news by reading our newsletter</p>
+         </div>
+         <div class="tab-content-item">
+            <div class="img-placeholder"><img src='/static/img/network/scrivici.svg' alt='scrivici' /></div>
+            <h3><a href='mailto:kmap@info-rac.org' >Contact us</a></h3>
+            <p>Do you need more info? Feel free to write us</p>
+         </div>
+         <div class="tab-content-item">
+            <div class="img-placeholder"><img src='/static/img/network/in.svg' alt='linkedin' /></div>
+            <h3><a target="_blank" href='https://www.linkedin.com/company/mediterranean-action-plan-barcelona-convention' >Linkedin</a></h3>
+            <p></p>
+         </div>
+         <div class="tab-content-item">
+            <div class="img-placeholder"><img src='/static/img/network/x.svg' alt='x' /></div>
+            <h3><a target="_blank" href='https://x.com/unepmapnews?mx=2' >X</a></h3>
+            <p></p>
+         </div>
+      </div>
+   </div>
+</div>
+
+<script type="text/javascript" >
+   document.addEventListener("DOMContentLoaded", function(event) {
+      jQuery('.tabs .tab-item').click(function (e) {
+        jQuery('.tabs .tab-item.active').removeClass('active');
+        var id = jQuery(this).data('id');
+        jQuery(this).addClass('active');
+        jQuery('.tab-content').removeClass('active');
+        jQuery('.tab-content#' + id).addClass('active');
+      });      
+
+      jQuery.ajax({
+        url: "https://108.132.37.60.nip.io/api.php", 
+        type: "GET", 
+        success: function(msg){
+          jQuery('.news-content-right').html(msg);
+        }
+      });
+   });       
+</script>

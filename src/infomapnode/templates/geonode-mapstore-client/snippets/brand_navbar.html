@@ -1,6 +1,6 @@
 {% load static %}
 {% load get_menu_json_infomapnode %}
-{% load catalogue_urls %}
+{# {% load catalogue_urls %} #}
 {% get_user_menu_extended as USER_MENU %}
 <style>
     header.gn-main-header {
@@ -349,13 +349,15 @@
             <div class="gn-menu-content-left">
                 <ul class="gn-menu-list">
                     <li>
-                         <a href="http://www.info-rac.org/en">
+			    <div style="position: relative;">
+                         	<a href="https://www.youtube.com/watch?v=VMhEfTr30gE" target="_blank" style="height: 100%;left: 0;width: 75%;display: block;	position: absolute;" title="Go to UNEP-MAP youtube video"></a>
+				<a title="Go to INFO/RAC homepage" href="http://www.info-rac.org" target="_blank" style="position: absolute;top: 0;right: 0;width: 24%;height: 100%;"></a>
                               {% if custom_theme.logo and custom_theme.logo.url %}
                                   <img src="{{ custom_theme.logo.url }}">
                               {% else %}
                                  <img src="{% block logo_src %}{% static 'img/KMAP6-LOGO-INFORAC-bianco.svg' %}{% endblock %}">
                               {% endif %}
-                         </a>
+			 </div>
                     </li>
                 </ul>
             </div>
@@ -363,7 +365,7 @@
                 <a href="/" id="kmap-logo">
                     <div class="logo-container">
                         <img  src="{% static 'img/KMAP4-LOGO-2-white.svg' %}" />
-                        <span class="logo-text">UNEP-MAP Knowledge Mangement Platform</span>
+                        <span class="logo-text">UNEP-MAP Knowledge Management Platform</span>
                     </div>
                     <span class="sub-text">A unique hub to Mediterranean knowledge</span>
                 </a>

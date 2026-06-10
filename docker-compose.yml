@@ -1,8 +1,7 @@
 version: '3.9'
 
 # Common Django template for GeoNode and Celery services below
-x-common-django:
-  &default-common-django
+x-common-django: &default-common-django
   image: ${COMPOSE_PROJECT_NAME}_django:latest
   restart: unless-stopped
   env_file:
@@ -24,25 +23,27 @@ services:
 
   # Our custom django application. It includes Geonode.
   django:
-    << : *default-common-django
+    <<: *default-common-django
     build:
       context: ./
       dockerfile: Dockerfile
     container_name: django4${COMPOSE_PROJECT_NAME}
     healthcheck:
-      test: "curl -m 10 --fail --silent --write-out 'HTTP CODE : %{http_code}\n' --output /dev/null http://django:8000/"
-      start_period: 60s
+      test: "curl -m 10 --fail --silent --write-out 'HTTP CODE : %{http_code}
+
+        ' --output /dev/null http://django:8000/"
+      start_period: 90s
       interval: 60s
       timeout: 10s
       retries: 2
     environment:
       - IS_CELERY=False
-    entrypoint: ["/usr/src/infomapnode/entrypoint.sh"]
+    entrypoint: [ "/usr/src/infomapnode/entrypoint.sh" ]
     command: "uwsgi --ini /usr/src/infomapnode/uwsgi.ini"
 
   # Celery worker that executes celery tasks created by Django.
   celery:
-    << : *default-common-django
+    <<: *default-common-django
     image: ${COMPOSE_PROJECT_NAME}_django:latest
     container_name: celery4${COMPOSE_PROJECT_NAME}
     depends_on:
@@ -50,7 +51,7 @@ services:
         condition: service_healthy
     environment:
       - IS_CELERY=True
-    entrypoint: ["/usr/src/infomapnode/entrypoint.sh"]
+    entrypoint: [ "/usr/src/infomapnode/entrypoint.sh" ]
     command: "celery-cmd"
 
   # Nginx is serving django static and media files and proxies to django and geonode
@@ -111,7 +112,9 @@ services:
         - BASE_IMAGE_VERSION=${GEOSERVER_BASE_IMAGE_VERSION}
     container_name: geoserver4${COMPOSE_PROJECT_NAME}
     healthcheck:
-      test: "curl -m 10 --fail --silent --write-out 'HTTP CODE : %{http_code}\n' --output /dev/null http://geoserver:8080/geoserver/ows"
+      test: "curl -m 10 --fail --silent --write-out 'HTTP CODE : %{http_code}
+
+        ' --output /dev/null http://geoserver:8080/geoserver/ows"
       start_period: 60s
       interval: 60s
       timeout: 10s
@@ -170,7 +173,7 @@ services:
     #ports:
     #  - "5432:5432"
 
-  # Vanilla RabbitMQ service. This is needed by celery
+    # Vanilla RabbitMQ service. This is needed by celery
   rabbitmq:
     image: rabbitmq:3-alpine
     container_name: rabbitmq4${COMPOSE_PROJECT_NAME}
@@ -190,7 +193,6 @@ services:
     depends_on:
       db:
         condition: service_healthy
-
 
 volumes:
   statics:
