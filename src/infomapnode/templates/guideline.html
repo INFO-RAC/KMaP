@@ -1,0 +1,28 @@
+{% extends "geonode_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "Guideline" %} — {{ block.super }} {% endblock %}
+
+{% block body_outer %}
+<div class="page-header">
+    <h2>{% blocktrans %}InfoMapNode guideline{% endblocktrans %}</h2>
+</div>
+<p>
+    {% blocktrans %}
+        This section is dedicated to provide the user with a navigation guide using the InfoMAPNode.
+    {% endblocktrans %}
+</p>
+<p>
+    {% blocktrans %}
+        The guide consists of a section dedicated to describing how to perform data and metadata searches within the
+        geoportal and how to view them in the integrated visualization client. As regards the user manual for accredited
+        users, please refer to the InfoMAPNode section of INFO/RAC.
+    {% endblocktrans %}
+</p>
+<p>
+    <a href="http://www.info-rac.org/en/infomap-system/infomapnode">{% blocktrans %}INFO/RAC Website - InfoMAPNode section{% endblocktrans %}</a>
+</p>
+<p>
+    <a href="http://www.info-rac.org/en/infomap-system/infomapnode-usergude.pdf">{% blocktrans %}InfoMAPNode user guide{% endblocktrans %}</a>
+</p>
+{% endblock %}

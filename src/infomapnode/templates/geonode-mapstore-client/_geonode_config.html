@@ -1,0 +1,39 @@
+{% extends 'geonode-mapstore-client/_geonode_config.html' %}
+{% block override_local_config %}
+<script>
+    window.__GEONODE_CONFIG__.overrideLocalConfig = function(localConfig, _) {
+        // Here the localConfig can be overridden and/or extended
+        localConfig.miscSettings = {maxURLLength: 1};
+        localConfig.plugins.geostory_viewer = localConfig.plugins.geostory_viewer.map(config => {
+        if (config.name === "GeoStory") {
+            return {
+                ...config,
+                cfg: {
+                    ...config.cfg,
+                    fontFamilies: [
+                        {
+                            family: "Arial",
+                        },{
+                            family: "Georgia",
+                        },{
+                            family: "Impact",
+                        },{
+                            family: "Tahoma",
+                        },{
+                            family: "Times New Roman",
+                        },{
+                            family: "Titillium Web",
+                            src: "https://fonts.googleapis.com/css2?family=Titillium+Web"
+                        },{
+                            family: "Verdana",
+                        },
+                    ]
+                }
+            }
+        }
+        return config;
+    });
+    return localConfig;
+};
+</script>
+{% endblock %}

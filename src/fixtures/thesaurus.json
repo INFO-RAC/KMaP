@@ -1,0 +1,1 @@
+[{"model": "base.thesaurus", "pk": 6, "fields": {"identifier": "unepmap-theme", "title": "UNEP-MAP themes", "date": "2018-05-23T10:25:56", "description": "UNEP-MAP themes, version 1.0", "slug": "unepmap-theme", "about": "http://vocabularies.unesco.org/thesaurus", "card_min": 1, "card_max": -1, "facet": true, "order": 0}}]

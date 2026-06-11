@@ -1,0 +1,89 @@
+
+{% load i18n %}
+{% load static %}
+<div class="row">
+    <div class="col-xs-12">
+        <h2 class="kmap-title">{% trans 'NAVIGATE BY THEME' %}</h2>
+    </div>
+</div>
+<style>
+    .kmap-navigate-by-theme {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+        list-style: none;
+        text-align: center;
+    }
+    .kmap-navigate-by-theme li {
+        width: 128px;
+        margin: 16px 8px;
+    }
+    .kmap-navigate-by-theme li img {
+        width: 85px;
+        height: auto;
+    }
+</style>
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="kmap-navigate-by-theme">
+            <li>
+                <a href="#/?filter{tkeywords}=77">
+                    <div>
+                        <img src="{% static 'img/themes/pollution.svg' %}"/>
+                        <div>{% trans 'Pollution' %}</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#/?filter{tkeywords}=78">
+                    <div>
+                        <img src="{% static 'img/themes/biodiversity.svg' %}"/>
+                        <div>{% trans 'Marine Biodiversity' %}</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#/?filter{tkeywords}=79">
+                    <div>
+                        <img src="{% static 'img/themes/sustainability.svg' %}"/>
+                        <div>{% trans 'Sustainability and Blue Economy' %}</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#/?filter{tkeywords}=80">
+                    <div>
+                        <img src="{% static 'img/themes/climate_change.svg' %}"/>
+                        <div>{% trans 'Climate Change' %}</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#/?filter{tkeywords}=81">
+                    <div>
+                        <img src="{% static 'img/themes/MSP.svg' %}"/>
+                        <div>{% trans 'Marine Spatial Planning' %}</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#/?filter{tkeywords}=76">
+                    <div>
+                        <img src="{% static 'img/themes/fishery.svg' %}"/>
+                        <div>{% trans 'Fishery and Aquaculture' %}</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#/?filter{tkeywords}=82">
+                    <div>
+                        <img src="{% static 'img/themes/governance.svg' %}"/>
+                        <div>{% trans 'Governance' %}</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

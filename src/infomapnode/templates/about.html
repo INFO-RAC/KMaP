@@ -1,0 +1,42 @@
+{% extends "geonode_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "About InfoMapNode" %} — {{ block.super }} {% endblock %}
+
+{% block body_outer %}
+<div class="page-header">
+    <h2>{% blocktrans %}About InfoMapNode{% endblocktrans %}</h2>
+</div>
+<p class="lead">{% blocktrans %}InfoMAPNode introduction{% endblocktrans %}</p>
+<p>
+    {% blocktrans %}
+        InfoMAPNode is the geoportal for viewing and consulting metadata and geospatial data collected under the Barcelona
+        Convention. The platform allows you to consult data directly collected by UNEP/MAP and theis MAP components or data
+        collections that are produced by international bodies and/or projects, operating in the context of the Mediterranean
+        Sea.
+    {% endblocktrans %}
+</p>
+<p>
+    {% blocktrans %}
+        InfoMAPNode is based on the open software package of GeoNode that is a geospatial content management system, using
+        as platform for the management and publication of geospatial data. It brings together mature and stable open-source
+        software projects under a consistent and easy-to-use interface allowing non-specialized users to share data and
+        create interactive maps.
+    {% endblocktrans %}
+</p>
+<p>
+    {% blocktrans %}
+        Data management tools built into InfoMAPNode allow for integrated creation of data, metadata, and map
+        visualizations. Each dataset in the system can be shared publicly or restricted to allow access to only specific
+        users, following INFO/RAC Data Management policy (please visit INFO/RAC website for more information). Social
+        features like user profiles and commenting and rating systems allow for the development of communities around each
+        platform to facilitate the use, management, and quality control of the data the geoportal instance contains.
+    {% endblocktrans %}
+</p>
+<p>
+    {% blocktrans %}
+        It is also designed to be a flexible platform that software developers can extend, modify or integrate against to
+        meet requirements in their own applications.
+    {% endblocktrans %}
+</p>
+{% endblock %}
