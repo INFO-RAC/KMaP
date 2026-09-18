@@ -100,7 +100,7 @@ services:
       - .env
     volumes:
       - nginx-certificates:/geonode-certificates
-    restart: unless-stopped
+    restart: on-failure
 
   # Geoserver backend
   geoserver:
