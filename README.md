@@ -31,6 +31,11 @@
 - `--clientid`: Client id of Geoserver's GeoNode Oauth2 client. A random value is set if left empty
 - `--clientsecret`: Client secret of Geoserver's GeoNode Oauth2 client. A random value is set if left empty
 ```bash
+  python create-envfile.py --hostname kmap.test.info-rac.org --geonodepwd Geonode --geoserverpwd Geoserver
+```
+
+
+```bash
   docker compose build
   docker compose up -d
 ```
