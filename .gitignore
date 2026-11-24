@@ -75,5 +75,3 @@ ENV/
 env.bak/
 venv.bak/
 vscode_runserver_launch.json
-.devcontainer/*
-.devcontainer/
